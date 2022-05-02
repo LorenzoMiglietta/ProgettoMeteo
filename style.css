@@ -1,0 +1,8 @@
+:root{
+    --ciano:#008094
+}
+
+body{
+    color: var(--ciano);
+}
+
