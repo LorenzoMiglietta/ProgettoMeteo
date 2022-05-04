@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NowMeteo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <h1>
-            Meteo
-        </h1>
-        <nav>
-            <li>Home</li>
-            <li>Social</li>
-            <li>Contact us</li>
-        </nav>
+      <h1>Meteo</h1>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Social</li>
+          <li>Contact us</li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <p id="tempo"></p>
+      <section class="city-meteo">
+        <div class="container">
+          <input type="text" name="inputCity" id="inputCity" on />
+          <button id="myBtn" onclick="getCity()">Button</button>
+          <div class="parameter">
+            <img src="img/icons8-thermometer-96.png" alt="" />
+            <p id="tempo">Temperatura:</p>
+          </div>
+          <div class="parameter">
+            <img src="img/icons8-windsock-96.png" alt="" />
+            <p id="vento">Vento:</p>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

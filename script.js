@@ -1,27 +1,33 @@
 async function getTempo(city){
-    var url=getURLByCity(city);
+    var str="http://api.openweathermap.org/geo/1.0/direct?q="+city+"&appid=e06672eb3d022cf9dbdffb18d384e515";
     var response = await
-    fetch ("https://api.openweathermap.org/data/2.5/weather?lat=45.46&lon=9.18&appid=e06672eb3d022cf9dbdffb18d384e515",
+    fetch(str,
     {
         method:"GET"
     });
     var jsonData = await response.json();
-    console.log(jsonData);
+    var lat = jsonData[0].lat.toPrecision(5);
+    var lon = jsonData[0].lon.toPrecision(5);
+    var url = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=e06672eb3d022cf9dbdffb18d384e515";
+    var response = await
+    fetch (url,
+    {
+        method:"GET"
+    });
+    var jsonData = await response.json();
     var temperaturaCelsius = jsonData.main.temp-273.15;
     document.getElementById("tempo").innerText = temperaturaCelsius.toPrecision(2)+"°";
 }
 
-async function getURLByCity(city){
-    var response = await
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q=Milan&appid=e06672eb3d022cf9dbdffb18d384e515",
-    {
-        method:"GET"
-    });
-    var jsonData = await response.json();
-    var lat = jsonData.lat;
-    var lon = jsonData.lon;
-    var str = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=e06672eb3d022cf9dbdffb18d384e515";
-    return str;
+function getCity(){
+    var city = document.getElementById("inputCity").value;
+    getTempo(city);
 }
-getTempo("Milan");
 
+var input = document.getElementById("inputCity");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("myBtn").click();
+  }
+});

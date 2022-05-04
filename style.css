@@ -1,8 +1,67 @@
 :root{
-    --ciano:#008094
+    --arancione:#FF9671;
+    --oro:#FFC75F;
+    --giallo:#F9F871;
+    --magenta:#FF6F91;
 }
 
 body{
-    color: var(--ciano);
+    color: var(--arancione);
 }
 
+
+.city-meteo{
+    position: relative;
+}
+
+input{
+    width: 10em;
+}
+
+li{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+ul{
+    float: right;
+    margin-right: 1em;
+}
+
+nav{
+    width: 40%;
+}
+
+header{
+    display: flex;
+    width: 85%;
+    margin:1em 5em;
+}
+
+header h1{
+    font-size: 3em;
+    width: 60%;
+    margin:0;
+}
+
+.container{
+    margin: 1em 3em;
+    padding: 10px;
+    border: 1px solid black;
+    display: block;
+}
+
+.container img{
+    display: inline;
+    width: 1em;
+    height: 1em;
+
+}
+
+.container p{
+    display: inline;
+}
+
+.container > *{
+    margin-bottom: 1em;
+} 
