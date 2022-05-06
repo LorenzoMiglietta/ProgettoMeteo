@@ -1,67 +1,76 @@
-:root{
-    --arancione:#FF9671;
-    --oro:#FFC75F;
-    --giallo:#F9F871;
-    --magenta:#FF6F91;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+*{
+    font-family: Ubuntu;
 }
 
-body{
-    color: var(--arancione);
+:root {
+    --xiketic: #1b1725ff;
+    --independence: #534b62ff;
+    --heliotrope-gray: #a499b3ff;
+    --thistle: #d0bcd5ff;
+    --celtic-blue: #226ce0ff;
 }
 
+body {
+    color: var(--thistle);
+}
 
-.city-meteo{
+.city-meteo {
     position: relative;
 }
 
-input{
+input {
     width: 10em;
 }
 
-li{
+li {
     display: inline-block;
     margin-left: 20px;
 }
 
-ul{
+ul {
     float: right;
     margin-right: 1em;
 }
 
-nav{
-    width: 40%;
+nav {
+    font-size: 1.2em;
 }
 
-header{
+header {
     display: flex;
-    width: 85%;
-    margin:1em 5em;
+    width: 93, 2%;
+    margin-top: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
+    justify-content: space-between;
+    background-color: rgba(10, 10, 10, 0.7);
+    padding: 0.5em;
 }
 
-header h1{
+header h1 {
     font-size: 3em;
-    width: 60%;
-    margin:0;
+    margin: 0;
 }
 
-.container{
+.container {
     margin: 1em 3em;
     padding: 10px;
     border: 1px solid black;
     display: block;
 }
 
-.container img{
+.container img {
     display: inline;
-    width: 1em;
-    height: 1em;
-
+    width: 2em;
 }
 
-.container p{
+.container p {
+    color: var(--xiketic);
     display: inline;
 }
 
-.container > *{
+.container>* {
     margin-bottom: 1em;
-} 
+}
