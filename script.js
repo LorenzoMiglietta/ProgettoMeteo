@@ -28,6 +28,6 @@ var input = document.getElementById("inputCity");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
     event.preventDefault();
-    document.getElementById("myBtn").click();
+    document.getElementById("btn1").click();
   }
 });
