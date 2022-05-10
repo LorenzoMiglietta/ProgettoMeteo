@@ -11,11 +11,11 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
 
-    <nav class="navbar navbar-light bg-light">
+    <nav class="px-3 navbar navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand fs-3 fw-bold align-middle" href="#">
           <img
@@ -29,7 +29,7 @@
         </a>
       </div>
     </nav>
-    <div class="container mt-5 w-50">
+    <div class="search-bar container w-50">
       <div class="input-group input-group-lg" >
         <input
           type="text"
@@ -37,9 +37,10 @@
           placeholder="City"
           aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-lg"
+          value=""
           id="inputCity"
         />
-        <button type="button" class="btn btn-secondary btn-lg" id="btn1">
+        <button type="button" class="btn btn-secondary btn-lg" id="btn1" onclick="getCity()">
           Check meteo
         </button>
       </div>

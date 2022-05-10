@@ -16,7 +16,8 @@ async function getTempo(city){
     });
     var jsonData = await response.json();
     var temperaturaCelsius = jsonData.main.temp-273.15;
-    document.getElementById("tempo").innerText = temperaturaCelsius.toPrecision(2)+"°";
+    //document.getElementById("tempo").innerText = temperaturaCelsius.toPrecision(2)+"°";
+    console.log(temperaturaCelsius);
 }
 
 function getCity(){
