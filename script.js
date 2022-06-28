@@ -32,3 +32,26 @@ input.addEventListener("keypress", function(event) {
     document.getElementById("btn1").click();
   }
 });
+
+
+let myChart = document.getElementById("myChart").getContext('2d');
+  let massPopChart = new Chart(myChart,{
+    type:'line', //tipo di chart
+    data:{
+      labels:['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge','New Bedford'],
+      datasets:[{
+        label: 'Temperature',
+        data:[
+          617549,
+          1252364,
+          24234,
+          23525,
+          63546,
+          66664
+        ],
+        backgroundColor: 'blue'
+      }]
+    },
+    options:{}
+
+  });
